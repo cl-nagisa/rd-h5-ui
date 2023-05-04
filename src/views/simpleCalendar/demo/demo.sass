@@ -1,0 +1,161 @@
+li
+  list-style: none
+.clear
+  clear: both
+.calendarBox
+  width: 100%
+  // 遮罩层
+  .maskLayer
+    position: fixed
+    z-index: 10
+    width: 100%
+    height: 100%
+    background: rgba(154, 154, 154, .4)
+  .chooseLayer
+    position: fixed
+    z-index: 11
+    bottom: 0
+    height: 270px
+    width: 100%
+    transform: translateY(0%)
+    background: rgb(245, 245, 245)
+    transition: all 4s
+    animation: slideUp .4s
+    border-top-left-radius: .5rem
+    border-top-right-radius: .5rem
+    .confirmButton
+      width: 90%
+      height: 5%
+      margin: 10px auto
+      span:nth-child(2)
+        float: right
+    .chooseLayerContent
+      overflow: hidden
+      height: 70%
+      width: 100%
+      margin: 5% 0
+      float: left
+      position: relative
+      .selected
+        position: absolute
+        border-top: 1px solid rgba(131, 131, 131, .7)
+        border-bottom: 1px solid rgba(131, 131, 131, .7)
+        z-index: 13
+        height: 40px
+        width: 40%
+        left: 30%
+        top: 80px
+      ul
+        z-index: 100
+        transform: rotate3d(1, 0, 0, 80deg) translate3d(0px, 0px, 2.5rem)
+        font-size: 1.5rem
+        width: 100%
+        color: rgba(83, 83, 83, .6)
+        li
+          width: 100%
+          height: 40px
+          text-align: center
+          line-height: 40px
+  .head
+    position: relative
+    font-family: '隶书'
+    text-align: center
+    line-height: 40px
+    font-size: 1.4rem
+    border: 1px solid rgba(212, 212, 212,.5)
+    img
+      position: absolute
+      left: 10px
+      top: .5rem
+      width: 1.5rem
+      height: 1.5rem
+    label
+      padding: 1.2rem 0
+  .yearMonth
+    font-family: '微软雅黑'
+    padding: 10px 0
+    width: 100%
+    border: 1px dashed rgba(212, 212, 212,.5)
+    font-size: 1.2rem
+    .yearTime
+      float: left
+      width: 18%
+      margin-right: 2%
+      margin-left: 5%
+      color: rgb(215,138,91)
+      position: relative
+      .openSearchYear
+        width: 0
+        height: 0
+        border-bottom: 10px solid rgb(131, 131, 131)
+        border-left: 10px solid transparent
+        width: 0
+        height: 0
+        position: absolute
+        bottom: 0
+        right: 0
+    .monthTime
+      float: left
+      width: 70%
+      margin-right: 5%
+      overflow: hidden
+      text-align: center
+      ul
+        li
+          width: 70px
+          float: left
+        .selectedMonth
+          color: rgb(251, 92, 82)
+  .weekBox,.dataBox
+    ul
+      width: 96%
+      margin: 0 auto
+      li
+        padding-top: 10px
+        float: left
+        width: (100% / 7)
+        text-align: center
+  .weekBox
+    li
+      color: rgb(163, 163, 163)
+      font-family: '隶书'
+      font-size: 1.3rem
+  .dataBox
+    li
+      height: 3rem
+      p
+        text-align: center
+        font-size: 1rem
+        margin: 0 auto
+        width: 1.7rem
+        height: 1.7rem
+        line-height: 1.7rem
+        border-radius: 50%
+    .fontColor
+      color: rgb(186, 186, 186)
+    span
+      font-size: .1rem
+      color: rgb(240,73,77)
+
+.selectedDate
+  background: rgba(240,73,77,.4)
+  color: #fff
+.borderSuccessBack
+  border: 1px solid rgb(203,111,112)
+.borderFailBack
+  border: 1px solid rgb(202,202,202)
+.isToday
+  background-color: rgb(158, 252, 100)
+  color: #fff
+.selectedYear
+  color: #333
+@keyframes slideUp
+  from
+    transform: translateY(100%)
+  to
+    transform: translateY(0%)
+@keyframes slideDown
+  from
+    transform: translateY(0%)
+  to
+    transform: translateY(100%)

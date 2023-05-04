@@ -1,0 +1,51 @@
+.fl-button-wrapper
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0 auto
+  background-color: #f95a28
+  transition: all .1s
+  &.disable
+    background-color: #b8bbbf
+  &.loading
+    background-color: #b8bbbf
+  .loading
+    display: flex
+    align-items: center
+    .k-line
+      display: inline-block
+      width: 6px
+      height: 6px
+      margin-left: 5px
+      border-radius: 100%
+      background-color: #fff
+      &.k-line11-1
+        animation: k-loadingP 2s infinite
+      &.k-line11-2
+        animation: k-loadingP 2s infinite
+        animation-delay: .15s
+      &.k-line11-3
+        animation: k-loadingP 2s infinite
+        animation-delay: .30s
+  label
+    display: block
+    flex: 0 auto
+    color: #fff
+
+@keyframes k-loadingP
+  0%
+    transform: translateY(0)
+  35%
+    transform: translateY(0)
+    opacity: .3
+  50%
+    transform: translateY(-6px)
+    opacity: .8
+  70%
+    transform: translateY(3px)
+    opacity: .8
+  85%
+    transform: translateY(-3px)
+
+

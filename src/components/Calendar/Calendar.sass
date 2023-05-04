@@ -1,0 +1,139 @@
+.fl-calendar-wrapper
+  position: relative
+  background-color: #fff
+  font-size: 0
+  .fl-modal
+    z-index: 2
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .4)
+  .header
+    display: flex
+    align-items: center
+    height: 40px
+    border-bottom: 1px solid #eee
+    .year-pre,.month-pre,.month-next,.year-next
+      flex: 0 0 15%
+      width: 15%
+      height: 100%
+      .block
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
+    .year-pre
+      img
+        width: 15px
+        height: 12px
+    .month-pre
+      img
+        width: 12px
+        height: 12px
+    .month-next
+      img
+        width: 12px
+        height: 12px
+    .year-next
+      img
+        width: 15px
+        height: 12px
+    .current-time
+      display: flex
+      align-items: center
+      justify-content: center
+      flex: 1 auto
+      height: 100%
+      font-size: 16px
+      color: #333
+      .year,.month
+        display: flex
+        align-items: center
+        height: 100%
+      .year
+        margin-right: 10px
+  .body
+    position: relative
+    .week,.date
+      display: flex
+      flex-wrap: wrap
+      font-size: 14px
+      list-style: none
+      color: #333
+      &.week
+        font-size: 12px
+        color: #999
+      li
+        display: flex
+        align-items: center
+        justify-content: center
+        flex: 0 auto
+        width: 14.285vw
+        height: 14.285vw
+        &:first-child,&:nth-child(7n),&:nth-child(7n + 1)
+          color: #FF5A22
+        &.current
+          background-color: #3C80E6
+          border-radius: 100%
+          color: #fff
+        &.dis
+          color: #ccc
+    .select-wrapper
+      z-index: 3
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 90%
+      background-color: #fff
+      border-radius: 4px
+      transform: translate(-50%, -50%)
+      .main
+        display: flex
+        align-items: center
+        height: 40px
+        border-bottom: 1px solid #eee
+        label
+          display: block
+          flex: 1 auto
+          font-size: 14px
+          color: #333
+          text-align: center
+        .top,.bottom
+          flex: 0 0 15%
+          width: 15%
+          height: 100%
+          margin: 0 4px
+          padding: 0 8px
+        .block
+          display: flex
+          align-items: center
+          justify-content: center
+          height: 100%
+          img
+            width: 12px
+            height: 12px
+      .content
+        display: flex
+        flex-wrap: wrap
+        font-size: 14px
+        list-style: none
+        color: #333
+        li
+          display: flex
+          align-items: center
+          justify-content: center
+          flex: 0 auto
+          width: 25%
+          height: 50px
+          &.current
+            background-color: #14BDF8
+            color: #fff
+          &.dis
+            color: #ccc
+
+.fl-fade-enter-active, .fl-fade-leave-active
+  transition: all .2s ease
+.fl-fade-enter, .fl-fade-leave-active
+  opacity: 0

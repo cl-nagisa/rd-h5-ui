@@ -1,0 +1,84 @@
+.fl-navbar-wrapper
+  overflow: hidden
+  &.giraffe
+    ul
+      li
+        i
+          &::before
+            width: 0
+            transition: width .2s
+        &.current
+          i
+            &::before
+              width: 100%
+  &.shark
+    ul
+      li
+        i
+          &::before
+            border-bottom: 0
+            transition: border .2s
+        &.current
+          i
+            &::before
+              border-bottom: 2px solid #f95a28
+  ul
+    z-index: 0
+    position: relative
+    display: flex
+    height: 100%
+    font-size: 0
+    background: #fff
+    &.is-scroll
+      display: inline-block
+      min-width: 100%
+      white-space: nowrap
+      li
+        display: inline-block
+        padding: 0 15px
+    &::before
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 0
+      border-bottom: 1px solid #eee
+      content: ''
+      box-sizing: border-box
+      transform-origin: 0 0
+    li
+      display: block
+      flex: 1 auto
+      height: 100%
+      font-size: 0
+      text-align: center
+      i
+        z-index: 0
+        position: relative
+        display: inline-block
+        color: #666
+        font-size: 12px
+        font-style: normal
+        &::before
+          position: absolute
+          left: 0
+          bottom: 0
+          width: 100%
+          height: 0
+          content: ''
+          box-sizing: border-box
+          transform-origin: 0 0
+      &.current
+        i
+          color: #f95a28
+          &::before
+            border-bottom: 2px solid #f95a28
+      &.no-border
+        i
+          &::before
+            border-bottom: 0
+  .current-nav
+    position: absolute
+    bottom: 0
+    height: 2px
+    background: #f95a28

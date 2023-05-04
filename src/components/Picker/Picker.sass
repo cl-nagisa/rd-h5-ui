@@ -1,0 +1,111 @@
+.fl-modal
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  opacity: .5
+  background: #000
+
+.fl-picker-container
+  position: fixed
+  top: auto
+  bottom: 0
+  left: 50%
+  right: auto
+  width: 100%
+  background: #fff
+  transform: translate3d(-50%, 0, 0)
+  backface-visibility: hidden
+  transition: .2s ease-out
+  .fl-picker-toolbar
+    display: flex
+    height: 40px
+    padding: 0 5%
+    span
+      display: flex
+      flex: 1 auto
+      height: 100%
+      font-size: 14px
+      color: #999
+      &.fl-picker-toolbar-confirm
+        justify-content: flex-end
+      &.fl-picker-toobar-title
+        align-items: center
+        justify-content: center
+        font-size: 12px
+      i
+        display: flex
+        align-items: center
+        flex: 0 0 auto
+        height: 100%
+        font-style: normal
+  .fl-picker-items
+    position: relative
+    display: flex
+    .fl-picker-slot
+      display: block
+      flex: 1 1 0
+      font-size: 14px
+      overflow: hidden
+      ul
+        li
+          padding: 0 10px
+          list-style: none
+          color: #707274
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+          &.fl-picker-selected
+            color: #000
+    .fl-picker-slot-divider
+      display: block
+      flex: 0 auto
+      font-size: 14px
+      text-align: center
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+    .fl-picker-center-highlight
+      box-sizing: border-box
+      position: absolute
+      left: 0
+      width: 100%
+      top: 50%
+      pointer-events: none
+      &:before
+        left: 0
+        top: 0
+        bottom: auto
+        right: auto
+        content: ""
+        position: absolute
+        height: 1px
+        width: 100%
+        background-color: #eaeaea
+        display: block
+        z-index: 15
+        transform: scaleY(.5)
+      &:after
+        left: 0
+        bottom: 0
+        right: auto
+        top: auto
+        content: ""
+        position: absolute
+        height: 1px
+        width: 100%
+        background-color: #eaeaea
+        display: block
+        z-index: 15
+        transform: scaleY(.5)
+
+
+.fl-picker-fade-enter,.fl-picker-fade-leave-active
+  opacity: 0
+.fl-picker-slide-bottom-enter,.fl-picker-slide-bottom-leave-active
+  transform: translate3d(-50%, 100%, 0)
+
+
+
+

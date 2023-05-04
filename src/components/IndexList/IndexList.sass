@@ -1,0 +1,101 @@
+@import "./assets/sass/common.sass"
+
+.fl-indexList-container
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: #f5f5f5
+  backface-visibility: hidden
+  transition: .3s ease-out
+  .fl-indexList-header
+    position: relative
+    height: 40px
+    line-height: 40px
+    background: #fff
+    font-size: 14px
+    color: #333
+    text-align: center
+    .fl-indexList-back
+      z-index: 3
+      position: absolute
+      display: inline-block
+      top: 0
+      left: 0
+      width: 30px
+      height: 100%
+      background: url("assets/images/back.png") no-repeat center center
+      background-size: 14px 14px
+      transform: rotateZ(180deg)
+  .fl-indexList-wrapper
+    position: relative
+    width: 100%
+    height: 100%
+    overflow: hidden
+    &.is-header
+      height: calc(100% - 40px)
+    .fl-list-wrapper
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      overflow: hidden
+      .scroll-content
+        .ul-group
+          background: #f5f5f5
+          list-style: none
+          .li-group
+            h5
+              padding: 10px 15px
+              line-height: 1.6
+              font-weight: normal
+              font-size: 14px
+              color: #999
+              word-break: break-all
+              text-align: justify
+            .ul-item
+              background: #fff
+              list-style: none
+              .li-item
+                padding: 10px 15px
+                border-bottom: 1px solid #eee
+                font-size: 14px
+                color: #333
+                word-break: break-all
+                text-align: justify
+                &:first-child
+                  padding-top: 10px
+                &:last-child
+                  border-bottom: none
+    .fl-indexList-fixed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      padding: 10px 15px
+      line-height: 1.6
+      background: #f5f5f5
+      font-weight: normal
+      font-size: 14px
+      color: #999
+      word-break: break-all
+      text-align: justify
+    .fl-list-nav
+      position: absolute
+      right: 0
+      top: 42px
+      width: auto
+      height: calc(100% - 42px)
+      overflow: hidden
+      ul
+        padding: 0 10px 0 20px
+        list-style: none
+        li
+          line-height: 2
+          font-size: 12px
+          color: #999
+          text-align: center
+          &.current
+            color: #3b99fc

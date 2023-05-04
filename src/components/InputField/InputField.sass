@@ -1,0 +1,75 @@
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button
+  -webkit-appearance: none !important
+  margin: 0
+
+::-webkit-input-placeholder
+  color: #ccc
+  font-size: 14px
+
+input
+  line-height: normal
+  border: 0
+  border-radius: 0
+  font-size: 1em
+  outline: 0
+  letter-spacing: normal
+  word-spacing: normal
+  text-transform: none
+  text-indent: 0
+  text-shadow: none
+  -webkit-appearance: none
+
+.fl-input-wrapper
+  position: relative
+  display: flex
+  align-items: center
+  height: 36px
+  line-height: 1
+  padding: 0 5%
+  background-color: #fff
+  overflow: hidden
+  .input-icon
+    display: block
+    flex: 0 auto
+    width: 16px
+    height: 16px
+    margin-right: 10px
+  .input-label
+    display: block
+    flex: 0 auto
+    min-width: 30%
+    max-width: 30%
+    overflow: hidden
+    label
+      font-size: 14px
+      color: #666
+  .input-placeholder
+    flex: 1 auto
+    overflow: hidden
+    input
+      width: 100%
+      font-size: 14px
+      color: #333
+      &.readonly
+        color: #999
+  .icon
+    flex: 0 auto
+    width: 12px
+    height: 12px
+    margin-left: 15px
+    overflow: hidden
+    &.absolute
+      position: absolute
+      top: 50%
+      right: 5%
+      margin-left: 0
+      transform: translateY(-50%)
+    &.icon-eye.absolute
+      right: calc(5% + 25px)
+  .input-diy
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 0 auto
+    height: 100%

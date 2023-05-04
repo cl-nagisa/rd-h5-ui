@@ -1,0 +1,76 @@
+.fl-dataListUI-wrapper
+  &:last-child
+    .fl-dataListUI-model
+      .items
+        &:before
+          border-bottom: none
+  .fl-dataListUI-model
+    position: relative
+    padding: 0 0 0 5%
+    background-color: #fff
+    &.isLink
+      background-image: url("../images/isLink.png")
+      background-repeat: no-repeat
+      background-position: 95% center
+      background-size: 12px 12px
+    &.isDropDown
+      transition: .2s ease-out
+    .icon
+      position: absolute
+      display: inline-block
+      top: 50%
+      left: 5%
+      height: 40px
+      transform: translateY(-50%)
+    .items
+      z-index: 0
+      position: relative
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      height: 100%
+      padding: 10px 0
+      &:before
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 200%
+        height: 0
+        border-bottom: 1px solid #ddd
+        content: ''
+        box-sizing: border-box
+        transform-origin: 0 0
+        transform: scale(0.5)
+      &.no-wrap
+        flex-wrap: nowrap
+      .item
+        display: block
+        flex: 1 auto
+        font-size: 12px
+        color: #333
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+      .item-block
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        flex: 1 auto
+        width: 50%
+        height: 100%
+        .item
+          width: 100%
+    .isDropDown
+      position: absolute
+      top: 50%
+      right: 5%
+      width: 12px
+      height: 12px
+      transform: translateY(-50%) rotateZ(90deg)
+      transition: .2s ease-out
+      &.show
+        transform: translateY(-50%) rotateZ(-90deg)
+  .fl-dataListUI-more
+    height: 0
+    overflow: hidden
+    transition: height .5s
